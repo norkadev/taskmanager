@@ -1,0 +1,32 @@
+<div class="container" role="main">
+<h1>Task Manager</h1>
+<hr>
+
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" class="needs-validation" novalidate>
+    <div class="form-group" >
+      <em *ngIf="(loginForm.controls.email?.invalid && loginForm.controls.email?.touched) ||
+      (loginForm.controls.email?.invalid && mouseOverLoginButton)">Required</em>
+
+      <input (ngModel)="email" name="email" id="email" type="text" class="form-control"
+      placeholder="example@gmail.com..." required/>
+    </div>
+
+    <div class="form-group" >
+      <em *ngIf="(loginForm.controls.password?.invalid && loginForm.controls.password?.touched) ||
+      (loginForm.controls.password?.invalid && mouseOverLoginButton)">Required</em>
+
+      <input (ngModel)="password" name="password" id="password" type="password" class="form-control"
+      placeholder="Password..." minlength="4" required/>
+    </div>
+
+    <span (mouseenter)="mouseOverLoginButton=true" (mouseleave)="mouseOverLoginButton=false">
+      <button type="submit" [disabled]="loginForm.invalid" class="mb-3 btn btn-primary">Login</button><br/>
+    </span>
+
+    Need and account?<span class="ml-1 pointable" (click)="goToRegister()">Register</span>
+
+  </form>
+
+
+
+</div>

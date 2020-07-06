@@ -1,0 +1,12 @@
+
+.container, .container-md, .container-lg, .container-xl {
+	max-width: 30%;
+  margin-top: 5em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/*.container, .container-sm, .container-md, .container-lg, .container-xl {
+	max-width: 30%;
+	margin-top: 5em;
+}*/

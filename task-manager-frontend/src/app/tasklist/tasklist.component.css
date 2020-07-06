@@ -1,0 +1,11 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	margin-top: 3em;
+}
+
+.list-group-item {
+	background-color: #39a0bf33 !important;
+}
